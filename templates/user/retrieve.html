@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>欢迎进入登录注册页面</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript" src="/static/account/js/jquery-1.11.1.min.js"></script>
+
+<link href="/static/account/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body>
+
+<div class="main">
+	<h1>找回密码</h1>
+	<div class="w3_login">
+		<div class="w3_login_module">
+			<div class="module form-module">
+                <div class="toggle">
+					<i class="fa fa-times fa-pencil"></i>
+				</div>
+				<div class="form">
+					<h2>找回密码</h2>
+					<form action="/retrieve" method="post">
+						<input type="email" name="email" placeholder="Email" required=" " />
+                        <select name="wen" class="form-select" >
+                            <option value="您的生日是多少？">您的生日是多少？</option>
+                            <option value="您的小学学校名称是什么？">您的小学学校名称是什么？</option>
+                        </select>
+                        <input type="text" name="da" placeholder="密保答案" required=" " />
+                        <input type="password" name="pwd" placeholder="重置密码" required=" " />
+						<input type="submit" value="确定" />
+                        <a href="/login">去登录</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+$('.toggle').click(function(){
+	$(this).children('i').toggleClass('fa-pencil');
+	$('.form').animate({height: "toggle",'padding-top': 'toggle','padding-bottom': 'toggle',opacity: "toggle"}, "slow");
+});
+</script>
+
+</body>
+</html>
